@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet RED (RPG CLI) - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">Portfolio.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#projects">Retour aux projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="project-page-content container">
+        <!-- Split Layout Section -->
+        <div class="project-split-layout">
+            <div class="project-visual">
+                <img src="red_mockup.png" alt="Aperçu du Projet RED" class="project-hero-image">
+            </div>
+            <div class="project-info-side">
+                <h1 class="shine">Projet RED (RPG CLI)</h1>
+                <p class="project-intro"><strong>Objectif :</strong> Créer un jeu de rôle (RPG) complet jouable dans le
+                    terminal, en utilisant les concepts avancés de la programmation orientée objet en Go.</p>
+
+                <h3>Technologies</h3>
+                <ul class="tech-list">
+                    <li>Golang (Structures, Interfaces, Goroutines)</li>
+                    <li>JSON (Sauvegarde et Chargement)</li>
+                    <li>Terminal UI (ASCII Art, Couleurs ANSI)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <h3>Challenges Techniques</h3>
+            <div class="challenge-grid">
+                <div class="challenge-item">
+                    <h4>Challenge 1 : Système de Combat</h4>
+                    <p>Développement d'un système de combat tour par tour avec gestion des statistiques, compétences
+                        spéciales et inventaire.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 2 : Persistance des Données</h4>
+                    <p>Implémentation d'un système de sauvegarde et de chargement de l'état du joueur (inventaire,
+                        niveau, position) via des fichiers JSON.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 3 : Architecture Modulaire</h4>
+                    <p>Organisation du code en packages distincts (personnages, monstres, objets, moteur) pour une
+                        maintenance et une évolutivité optimales.</p>
+                </div>
+            </div>
+
+            <h3>Fonctionnalités Principales</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>Personnage</h4>
+                    <p>Création personnalisée (Nom, Classe : Humain/Elfe/Nain), Niveaux, Stats (PV, Mana).</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Inventaire & Économie</h4>
+                    <p>Gestion d'objets (Potions, Livre de sorts), Marchand (Achat/Vente), Limite d'inventaire.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Crafting (Forgeron)</h4>
+                    <p>Fabrication d'équipements (Chapeau, Tunique, Bottes) à partir de ressources (Plume, Cuir, etc.).
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h4>Combat Tour par Tour</h4>
+                    <p>Affrontement contre Monstres (Gobelin), IA basique, Attaques physiques et Sorts (Boule de feu).
+                    </p>
+                </div>
+            </div>
+
+            <h3>Systèmes Avancés</h3>
+            <ul>
+                <li><strong>Équipement :</strong> Bonus de stats selon les objets équipés.</li>
+                <li><strong>Expérience :</strong> Montée de niveau et progression.</li>
+                <li><strong>Magie :</strong> Gestion de la ressource Mana pour les sorts.</li>
+            </ul>
+        </div>
+
+        <div class="project-footer">
+            <a href="index.html#projects" class="btn">Retour aux projets</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

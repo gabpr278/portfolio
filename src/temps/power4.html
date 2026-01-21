@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power'4 Web - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">Portfolio.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#projects">Retour aux projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="project-page-content container">
+        <!-- Split Layout Section -->
+        <div class="project-split-layout">
+            <div class="project-visual">
+                <img src="power4_mockup.png" alt="Aperçu du jeu Power'4 Web" class="project-hero-image">
+            </div>
+            <div class="project-info-side">
+                <h1 class="shine">Power'4 Web</h1>
+                <p class="project-intro"><strong>Objectif :</strong> Développer un jeu multijoueur en temps réel (local)
+                    avec une logique serveur robuste en Go et une interface web interactive.</p>
+
+                <h3>Technologies</h3>
+                <ul class="tech-list">
+                    <li>Golang (Logique de jeu, Gestion d'état)</li>
+                    <li>HTML/CSS (Interface utilisateur, Grille de jeu)</li>
+                    <li>JavaScript (Interaction client, Rafraîchissement)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <h3>Challenges Techniques</h3>
+            <div class="challenge-grid">
+                <div class="challenge-item">
+                    <h4>Challenge 1 : Moteur de Jeu</h4>
+                    <p>Implémentation de l'algorithme de vérification de victoire (lignes, colonnes, diagonales)
+                        optimisé pour être exécuté à chaque coup.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 2 : Gestion de Session</h4>
+                    <p>Système permettant de gérer l'état de la partie (tour du joueur, grille, score) et de le
+                        persister entre les requêtes HTTP.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 3 : Interface Réactive</h4>
+                    <p>Création d'une grille interactive qui se met à jour visuellement en fonction de l'état du jeu
+                        renvoyé par le serveur.</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-footer">
+            <a href="index.html#projects" class="btn">Retour aux projets</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

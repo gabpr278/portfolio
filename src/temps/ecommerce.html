@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site E-commerce Dynamique - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">Portfolio.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#projects">Retour aux projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="project-page-content container">
+        <!-- Split Layout Section -->
+        <div class="project-split-layout">
+            <div class="project-visual">
+                <img src="ecommerce_mockup.png" alt="Aperçu du site E-commerce" class="project-hero-image">
+            </div>
+            <div class="project-info-side">
+                <h1 class="shine">Site E-commerce Dynamique</h1>
+                <p class="project-intro"><strong>Objectif :</strong> Mettre en pratique la programmation Web avec Golang
+                    à travers la création d'un site e-commerce complet.</p>
+
+                <h3>Technologies</h3>
+                <ul class="tech-list">
+                    <li>Golang (Serveur HTTP, Gestion des routes)</li>
+                    <li>HTML Templates (Actions, Boucles, Conditions)</li>
+                    <li>CSS (Mise en forme responsive)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-body">
+            <h3>Challenges Techniques</h3>
+            <div class="challenge-grid">
+                <div class="challenge-item">
+                    <h4>Challenge 1 : Catalogue</h4>
+                    <p>Affichage dynamique d'une liste d'articles (minimum 5) stockés dans une variable globale. Chaque
+                        article inclut image, nom, prix et réduction optionnelle.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 2 : Détails Produit</h4>
+                    <p>Page dédiée affichant les informations détaillées (description, stock, etc.) avec gestion des
+                        erreurs si l'article est introuvable.</p>
+                </div>
+                <div class="challenge-item">
+                    <h4>Challenge 3 : Administration</h4>
+                    <p>Formulaire d'ajout de produit avec validation des données et redirection automatique vers la page
+                        du nouveau produit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-footer">
+            <a href="index.html#projects" class="btn">Retour aux projets</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
