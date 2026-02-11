@@ -3,13 +3,18 @@ package router
 import (
 	"log"
 	"net/http"
-	"portfolio/controller"
+	"os"
+
+	"github.com/gabpr278/portfolio/src/controller"
 )
 
 // InitServ initializes the server and routes.
 func InitServ() {
 	// Define the port
-	port := ":8080"
+	port := os.Getenv("PORT")
+
+	// Register the todo handler
+	http.HandleFunc("/todo", controller.TodoHandler)
 
 	// Register the main handler from the controller
 	http.HandleFunc("/", controller.MainHandler)

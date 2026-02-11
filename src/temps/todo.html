@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Basic Todo Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #a78bfa;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-todo {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            flex: 1;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #222;
+            color: #fff;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background: #a78bfa;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #8b5cf6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1>Todo List</h1>
+
+        <div class="add-todo">
+            <input type="text" placeholder="Add a new task..." id="new-task">
+            <button id="add-btn">Add</button>
+        </div>
+
+        <ul id="todo-list">
+            <!-- Dynamic todos will go here -->
+            <li>Example Task 1 <button class="delete-btn">x</button></li>
+            <li>Example Task 2 <button class="delete-btn">x</button></li>
+        </ul>
+
+        <p style="text-align: center; margin-top: 1rem;">
+            <a href="/" style="color: #ccc; text-decoration: none;">&larr; Back to Portfolio</a>
+        </p>
+    </div>
+
+    <script>
+        // Simple client-side logic placeholder
+        document.getElementById('add-btn').addEventListener('click', () => {
+            const input = document.getElementById('new-task');
+            if (input.value.trim() === '') return;
+
+            const li = document.createElement('li');
+            li.innerHTML = `${input.value} <button class="delete-btn">x</button>`;
+            document.getElementById('todo-list').appendChild(li);
+            input.value = '';
+
+            // Note: This is just UI, backend persistence is not yet implemented
+        });
+
+        document.getElementById('todo-list').addEventListener('click', (e) => {
+            if (e.target.classList.contains('delete-btn')) {
+                e.target.parentElement.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>
